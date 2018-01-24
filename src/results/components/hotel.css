@@ -1,0 +1,13 @@
+.Hotel {
+  margin-bottom: 10px;
+  background-color: #EEE;
+}
+
+.Hotel .Hotel-item{
+  max-height: 120px;
+  overflow: hidden;
+}
+
+.Hotel .Hotel-paddding{
+  padding: 5px;
+}
