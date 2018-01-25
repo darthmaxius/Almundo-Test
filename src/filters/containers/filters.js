@@ -11,11 +11,14 @@ class Filters extends Component {
 }
 
 const mapStateToProps = (state, props) => {
-  return {}
+  return {
+    results: state.get('hotels')
+  }
 }
 
 const mapDispatchToProps = (dispatch) => {
-  return {}
+  return {
+  }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Filters)

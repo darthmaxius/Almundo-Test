@@ -3,9 +3,7 @@ import { connect } from 'react-redux'
 import ResultsComponent from '../components/results'
 
 class Results extends Component {
-
   render () {
-    console.log(this.props.results)
     return (
       <ResultsComponent results={this.props.results} />
     )
