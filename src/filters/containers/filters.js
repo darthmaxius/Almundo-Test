@@ -4,15 +4,16 @@ import Box from '../components/box'
 
 class Filters extends Component {
   render () {
+    console.log(this)
     return (
-      <Box></Box>
+      <Box results={this.props.filters}></Box>
     )
   }
 }
 
 const mapStateToProps = (state, props) => {
   return {
-    results: state.get('hotels')
+    filters: state.get('filters')
   }
 }
 

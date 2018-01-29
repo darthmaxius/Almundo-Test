@@ -2624,9 +2624,9 @@ const initialState = [
 const results = (state = initialState , action) => {
   switch (action.type) {
     case CLICK_STARS:
-      return initialState.filter((item)=>{
-        if(!action.payload.stars) return true
-        
+      return initialState.filter((item) => {
+        if (!action.payload.stars) return true
+
         return item.stars == action.payload.stars
       })
       break

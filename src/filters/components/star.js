@@ -11,7 +11,7 @@ class Star extends Component {
 
   render () {
     return (
-      <Button onClick={this.handleClick}>
+      <Button className="btn-block" onClick={this.handleClick}>
         {this.props.children}
       </Button>
     )
