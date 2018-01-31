@@ -5,7 +5,7 @@ import { createStore, applyMiddleware } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import { Map as map } from 'immutable'
 import { Provider } from 'react-redux'
-import { thunk } from 'redux-thunk'
+import thunk from 'redux-thunk'
 import logger from 'redux-logger'
 import reducer from '../reducers/index'
 

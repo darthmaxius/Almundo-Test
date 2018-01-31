@@ -1,2 +1,4 @@
 export const CLICK_STARS = 'CLICK_STARS'
 export const DRAW_STARS = 'DRAW_STARS'
+export const RESULT_SUCCESS = 'RESULT_SUCCESS'
+export const RESULT_IS_LOADING = 'RESULT_IS_LOADING'
