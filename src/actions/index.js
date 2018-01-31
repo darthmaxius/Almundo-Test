@@ -32,7 +32,7 @@ const resultSuccess = (data) => {
   }
 }
 
-export function drawResults () {
+export function getResults () {
   return (dispatch) => {
     dispatch(resultIsLoading(true))
 

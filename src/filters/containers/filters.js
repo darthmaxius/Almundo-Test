@@ -4,7 +4,6 @@ import Box from '../components/box'
 
 class Filters extends Component {
   render () {
-    console.log(this)
     return (
       <Box results={this.props.filters}></Box>
     )

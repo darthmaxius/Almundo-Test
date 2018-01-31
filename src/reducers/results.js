@@ -16,9 +16,6 @@ const results = (state = initialState , action) => {
       originalData = action.payload.data
       return action.payload.data
       break
-    case RESULT_IS_LOADING:
-      return state
-      break
     default:
       return state
   }

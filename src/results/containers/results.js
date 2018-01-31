@@ -6,19 +6,20 @@ import * as actions from '../../actions/index'
 
 class Results extends Component {
   componentDidMount () {
-    this.props.actions.drawResults()
+    this.props.actions.getResults()
   }
 
   render () {
     return (
-      <ResultsComponent results={this.props.results} />
+      <ResultsComponent results={this.props.results} loading={this.props.loading} />
     )
   }
 }
 
 const mapStateToProps = (state, props) => {
   return {
-    results: state.get('hotels')
+    results: state.get('hotels'),
+    loading: state.get('loading')
   }
 }
 

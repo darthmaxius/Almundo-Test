@@ -14,9 +14,12 @@ const Results = (props) => {
           <Filters></Filters>
           </Col>
           <Col md={9}>
-          {props.results.map((item) => {
-             return <Hotel key={item.id} {...item} />
-           })}
+          {props.loading ?
+             <h2>Cargando</h2>
+             :
+             props.results.map((item) => {
+               return <Hotel key={item.id} {...item} />
+             })}
           </Col>
         </Row>
       </Grid>
