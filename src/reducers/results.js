@@ -1,7 +1,7 @@
 import { CLICK_STARS, RESULT_SUCCESS, RESULT_IS_LOADING } from '../action-types'
 
 const initialState = []
-let originalData = []
+let originalData
 
 const results = (state = initialState , action) => {
   switch (action.type) {
@@ -14,7 +14,7 @@ const results = (state = initialState , action) => {
       break
     case RESULT_SUCCESS:
       originalData = action.payload.data
-      return action.payload.data
+      return originalData
       break
     default:
       return state

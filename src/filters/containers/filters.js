@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import Box from '../components/box'
+import BoxStars from '../components/box-stars'
+import { bindActionCreators } from 'redux'
+import * as actions from '../../actions/index'
 
 class Filters extends Component {
   render () {
     return (
-      <Box results={this.props.filters}></Box>
+      <BoxStars results={this.props.filters} handleClick={this.props.actions.updateResults}></BoxStars>
     )
   }
 }
@@ -18,6 +20,7 @@ const mapStateToProps = (state, props) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
+    actions: bindActionCreators(actions, dispatch)
   }
 }
 

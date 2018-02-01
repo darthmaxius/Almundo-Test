@@ -1,12 +1,4 @@
-import { CLICK_STARS, RESULT_SUCCESS, RESULT_IS_LOADING } from '../action-types'
-
-export function clickStars (stars) {
-  return {
-    type: CLICK_STARS,
-    payload: {
-    stars}
-  }
-}
+import { CLICK_STARS, RESULT_SUCCESS, RESULT_IS_LOADING, UPDATE_RESULT } from '../action-types'
 
 export function drawStars () {
   return {
@@ -51,5 +43,14 @@ export function getResults () {
         return dispatch(resultSuccess(data))
       })
       .catch(e => console.error('Something went wrong'))
+  }
+}
+
+export function updateResults (data) {
+  return {
+    type: UPDATE_RESULT,
+    payload: {
+      filters: data
+    }
   }
 }
