@@ -3,19 +3,23 @@ import { connect } from 'react-redux'
 import { Checkbox } from 'react-bootstrap'
 
 class Star extends Component {
-  handleClick = ()=>{
+  handleClick = () => {
     let filters = this.props.filterSelected;
 
-    if(!filters.stars){
+    if (!filters.stars){
       filters.stars=[];
     }
     const key = filters.stars.indexOf(this.props.stars);
 
-    if(key==-1){
-      filters.stars.push(this.props.stars);
-    }else{
-      filters.stars.splice(key, 1);
-   }
+    if (this.props.stars){
+      if (key == -1){
+        filters.stars.push(this.props.stars);
+      } else {
+        filters.stars.splice(key, 1);
+      }
+    } else {
+      filters.stars = []
+    }
 
     this.props.handleClick(filters);
   }

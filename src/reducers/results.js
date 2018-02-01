@@ -1,21 +1,35 @@
-import { CLICK_STARS, RESULT_SUCCESS, RESULT_IS_LOADING } from '../action-types'
+import { RESULT_SUCCESS, RESULT_IS_LOADING, UPDATE_RESULT } from '../action-types'
 
 const initialState = []
 let originalData
 
 const results = (state = initialState , action) => {
   switch (action.type) {
-    case CLICK_STARS:
-      return originalData.filter((item) => {
-        if (!action.payload.stars) return true
+    case UPDATE_RESULT:
+      let filteredResults = []
 
-        return item.stars == action.payload.stars
+      filteredResults = originalData.filter((item) => {
+        let finded = false
+
+        if (!action.payload.filters.stars.length) {
+          finded = true
+        }else {
+          action.payload.filters.stars.forEach((stars, key) => {
+            if (!finded && stars == item.stars) finded = true
+          })
+        }
+
+        return finded
       })
+
+      return filteredResults
       break
+
     case RESULT_SUCCESS:
       originalData = action.payload.data
       return originalData
       break
+
     default:
       return state
   }
