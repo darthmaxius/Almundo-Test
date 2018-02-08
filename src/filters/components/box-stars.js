@@ -1,21 +1,40 @@
-import React from 'react'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import Star from './star'
 
-const repeat = (results, handleClick) => {
+const repeat = (results, handleClick, filterSelected) => {
   return results.map((item) => {
-    return <Star key={item} stars={item} handleClick={handleClick}>
+    return <Star
+             key={item}
+             stars={item}
+             handleClick={handleClick}
+             filterSelected={filterSelected}>
              {item > 0 ? `${item} Estrellas` : `Todos`}
            </Star>
   })
 }
 
-const BoxStars = (props) => {
-  return (
-    <div>
-      <h3>Filtros</h3>
-      {repeat(props.results, props.handleClick)}
-    </div>
-  )
+class BoxStars extends Component {
+  render () {
+    return (
+      <div>
+        <h3>Filtros</h3>
+        {repeat(this.props.results, this.props.handleClick, this.props.filterSelected)}
+      </div>
+    )
+  }
 }
 
-export default BoxStars
+const mapStateToProps = (state, props) => {
+  return {
+    filterSelected: state.get('filterSelected')
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(BoxStars)
