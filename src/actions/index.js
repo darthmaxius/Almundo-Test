@@ -1,4 +1,4 @@
-import { CLICK_STARS, RESULT_SUCCESS, RESULT_IS_LOADING, UPDATE_RESULT } from '../action-types'
+import { CLICK_STARS, RESULT_SUCCESS, RESULT_IS_LOADING, UPDATE_RESULT, UPDATE_FILTERS } from '../action-types'
 
 export function drawStars () {
   return {
@@ -49,6 +49,15 @@ export function getResults () {
 export function updateResults (data) {
   return {
     type: UPDATE_RESULT,
+    payload: {
+      filters: data
+    }
+  }
+}
+
+export function updateFilters (data) {
+  return {
+    type: UPDATE_FILTERS,
     payload: {
       filters: data
     }

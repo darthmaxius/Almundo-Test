@@ -1,4 +1,4 @@
-import { UPDATE_RESULT } from '../action-types/index'
+import { UPDATE_FILTERS } from '../action-types/index'
 
 let initialState = {
   stars: []
@@ -6,7 +6,7 @@ let initialState = {
 
 const filterSelected = (state = initialState , action) => {
   switch (action.type) {
-    case UPDATE_RESULT:
+    case UPDATE_FILTERS:
       return action.payload.filters
       break
     default:

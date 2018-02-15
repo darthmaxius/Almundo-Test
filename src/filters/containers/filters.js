@@ -7,7 +7,10 @@ import * as actions from '../../actions/index'
 class Filters extends Component {
   render () {
     return (
-      <BoxStars results={this.props.filters} handleClick={this.props.actions.updateResults} />
+      <div>
+        <h3>Filtros</h3>
+        <BoxStars results={this.props.filters} handleClickUpdateResults={this.props.actions.updateResults} handleClickUpdateFilters={this.props.actions.updateFilters} />
+      </div>
     )
   }
 }
