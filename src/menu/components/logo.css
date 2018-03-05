@@ -1,0 +1,9 @@
+.Logo{
+  background: linear-gradient(#002f71, #194884);
+  height: 60px;
+}
+
+.Logo-isologo{
+  padding-top: 5px;
+  padding-bottom: 5px; 
+}

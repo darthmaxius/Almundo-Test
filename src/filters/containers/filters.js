@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import BoxStars from '../components/box-stars'
+import BoxStars from '../containers/box-stars'
 import { bindActionCreators } from 'redux'
 import * as actions from '../../actions/index'
 
