@@ -7,7 +7,7 @@ const HotelMealPlan = (props) => {
   });
 
   return (
-    <p>
+    <p className="MealPlan">
       {amenities.map((item) => item)}
     </p>
   )

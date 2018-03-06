@@ -4,10 +4,26 @@
 }
 
 .Hotel .Hotel-item{
-  max-height: 120px;
-  overflow: hidden;
+  
 }
 
 .Hotel .Hotel-paddding{
   padding: 5px;
+}
+
+.Hotel-data .StarsBlock{
+  margin-bottom: 1em;
+}
+
+.Hotel-data .StarIcon{
+  font-size: 1.5em;
+}
+
+.Hotel-data .MealPlan i{
+  font-size: 2em;
+  margin-right: 0.5em;
+}
+
+.Hotel-data h3{
+  margin-bottom: 0px;
 }

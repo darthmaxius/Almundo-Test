@@ -12,12 +12,12 @@ const Hotel = (props) => {
     <div className='Hotel'>
       <Grid bsClass='Hotel-item'>
         <Row>
-          <Col md={3}>
+          <Col md={3} sm={12}>
             <img className='Hotel-img img-responsive' src={`${IMAGES_HOTELS}/${props.image}`} />
           </Col>
-          <Col md={6} className='Hotel-data'>
+          <Col md={6} sm={12} className='Hotel-data'>
             <Title name={props.name} />
-            <Stars stars={props.stars} />
+            <p className="StarsBlock"><Stars stars={props.stars} /></p>
             <MealPlan amenities={props.amenities} />
           </Col>
           <Col md={3}>

@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { Panel } from 'react-bootstrap'
 import Star from '../components/star'
 import StarIcon from '../components/star-icon'
+import './box.css'
 
 const repeat = (results, handleClickUpdateResults, filterSelected, handleClickUpdateFilters, handleForceUpdate) => {
   return results.map((item) => {
@@ -42,7 +43,7 @@ class BoxStars extends Component {
 
   render() {
     return (
-      <Panel defaultExpanded>
+      <Panel defaultExpanded className='Box'>
         <Panel.Heading>
           <Panel.Title toggle>
             <StarIcon stars="1" />Estrellas

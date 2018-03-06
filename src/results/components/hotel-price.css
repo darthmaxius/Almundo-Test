@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+.Price .Price-title, .Price .Price-title .Price-currency{
+  color: #df6800;
+}
+
 .Price .Price-subtitle{
   font-size: 12px;
 }

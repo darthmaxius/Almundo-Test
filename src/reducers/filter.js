@@ -1,8 +1,8 @@
 import { DRAW_STARS } from '../action-types'
 
-const initialState = [0, 3, 4, 5]
+const initialState = [0, 1, 2, 3, 4, 5]
 
-const filter = (state = initialState , action) => {
+const filter = (state = initialState, action) => {
   switch (action.type) {
     case DRAW_STARS:
       return initialState

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Panel, FormGroup, FormControl, Form, Button, Grid, Row, Col } from 'react-bootstrap'
 import { connect } from 'react-redux'
+import './box.css'
 
 class BoxName extends Component {
   handleSubmit = event => {
@@ -16,7 +17,7 @@ class BoxName extends Component {
 
   render() {
     return (
-      <Panel defaultExpanded>
+      <Panel defaultExpanded className='Box'>
         <Panel.Heading>
           <Panel.Title toggle>
             Nombre del Hotel
