@@ -1,13 +1,14 @@
 import React from 'react'
 
-const Capitalize = (string) => {
-  return string.charAt(0).toUpperCase() + string.slice(1)
-}
-
 const HotelMealPlan = (props) => {
+  let amenities = []
+  props.amenities.forEach(element => {
+    amenities.push(<i className={`icon-${element}`} key={element}></i>)
+  });
+
   return (
     <p>
-      {Capitalize(props.title)}
+      {amenities.map((item) => item)}
     </p>
   )
 }
