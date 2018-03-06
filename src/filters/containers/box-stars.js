@@ -8,30 +8,30 @@ const repeat = (results, handleClickUpdateResults, filterSelected, handleClickUp
   return results.map((item) => {
     let checked = false;
 
-    if(item == 0 && filterSelected.stars.length == 0){
+    if (item == 0 && filterSelected.stars.length == 0) {
       checked = true
     }
-    else{
+    else {
       checked = false;
     }
 
-    if(!checked && filterSelected.stars.indexOf(item)>-1){
+    if (!checked && filterSelected.stars.indexOf(item) > -1) {
       checked = true;
     }
 
     const propsElement = {
       key: item,
-      stars:item,
+      stars: item,
       handleClickUpdateResults: handleClickUpdateResults,
       handleClickUpdateFilters: handleClickUpdateFilters,
       handleForceUpdate: handleForceUpdate,
       filterSelected: filterSelected,
-      checked:checked
+      checked: checked
     }
 
     return <Star {...propsElement}>
-            {item > 0 ? <StarIcon stars={item} /> : `Todos`}
-           </Star>
+      {item > 0 ? <StarIcon stars={item} /> : `Todos`}
+    </Star>
   })
 }
 
@@ -40,17 +40,17 @@ class BoxStars extends Component {
     this.forceUpdate()
   }
 
-  render () {
+  render() {
     return (
-      <Panel id='collapsible-panel-example-2' defaultExpanded>
+      <Panel defaultExpanded>
         <Panel.Heading>
           <Panel.Title toggle>
-          Estrellas
+            <StarIcon stars="1" />Estrellas
           </Panel.Title>
         </Panel.Heading>
         <Panel.Collapse>
           <Panel.Body>
-          {repeat(this.props.results, this.props.handleClickUpdateResults, this.props.filterSelected, this.props.handleClickUpdateFilters, this.handleForceUpdate)}
+            {repeat(this.props.results, this.props.handleClickUpdateResults, this.props.filterSelected, this.props.handleClickUpdateFilters, this.handleForceUpdate)}
           </Panel.Body>
         </Panel.Collapse>
       </Panel>

@@ -1,14 +1,16 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import BoxStars from '../containers/box-stars'
+import BoxStars from './box-stars'
+import BoxName from './box-name'
 import { bindActionCreators } from 'redux'
 import * as actions from '../../actions/index'
 
 class Filters extends Component {
-  render () {
+  render() {
     return (
       <div>
         <h3>Filtros</h3>
+        <BoxName />
         <BoxStars results={this.props.filters} handleClickUpdateResults={this.props.actions.updateResults} handleClickUpdateFilters={this.props.actions.updateFilters} />
       </div>
     )

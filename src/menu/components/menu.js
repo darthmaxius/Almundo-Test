@@ -5,7 +5,7 @@ import './logo.css'
 
 const Menu = (props) => {
   return (
-    <Navbar className='container-fluid Logo'>
+    <Navbar fluid className='Logo'>
       <Navbar.Header>
         <Navbar.Brand>
           <a href='#home' className='Logo-isologo'>

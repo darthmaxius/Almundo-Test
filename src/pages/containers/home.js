@@ -3,18 +3,18 @@ import { connect } from 'react-redux'
 import Header from '../../header/components/header'
 import Results from '../../results/containers/results'
 import Menu from '../../menu/components/menu'
-import Container from '../../container/components/container'
+import Content from '../../content/components/content'
 
 class Home extends Component {
-  render () {
+  render() {
     return (
       <div>
         <Header>
           <Menu></Menu>
         </Header>
-        <Container>
+        <Content>
           <Results></Results>
-        </Container>
+        </Content>
       </div>
     )
   }
