@@ -10,7 +10,7 @@ class Filters extends Component {
     return (
       <div>
         <h3>Filtros</h3>
-        <BoxName />
+        <BoxName results={this.props.filters} handleClickUpdateResults={this.props.actions.updateResults} handleClickUpdateFilters={this.props.actions.updateFilters} />
         <BoxStars results={this.props.filters} handleClickUpdateResults={this.props.actions.updateResults} handleClickUpdateFilters={this.props.actions.updateFilters} />
       </div>
     )

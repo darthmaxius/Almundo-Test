@@ -3,7 +3,7 @@ import { RESULT_SUCCESS, RESULT_IS_LOADING, UPDATE_RESULT } from '../action-type
 const initialState = []
 let originalData
 
-const results = (state = initialState , action) => {
+const results = (state = initialState, action) => {
   switch (action.type) {
     case UPDATE_RESULT:
       let filteredResults = []
@@ -13,14 +13,22 @@ const results = (state = initialState , action) => {
 
         if (!action.payload.filters.stars.length) {
           finded = true
-        }else {
+        } else {
           action.payload.filters.stars.forEach((stars, key) => {
             if (!finded && stars == item.stars) finded = true
           })
         }
 
+        if (item.name.toLowerCase().indexOf(action.payload.filters.name.toLowerCase()) > -1) {
+          finded = true
+        } else {
+          finded = false
+        }
+
         return finded
       })
+
+
 
       return filteredResults
       break

@@ -1,10 +1,11 @@
 import { UPDATE_FILTERS } from '../action-types/index'
 
 let initialState = {
-  stars: []
+  stars: [],
+  name: ``
 }
 
-const filterSelected = (state = initialState , action) => {
+const filterSelected = (state = initialState, action) => {
   switch (action.type) {
     case UPDATE_FILTERS:
       return action.payload.filters
