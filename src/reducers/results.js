@@ -19,7 +19,7 @@ const results = (state = initialState, action) => {
           })
         }
 
-        if (item.name.toLowerCase().indexOf(action.payload.filters.name.toLowerCase()) > -1) {
+        if (action.payload.filters.name == "" || item.name.toLowerCase().indexOf(action.payload.filters.name.toLowerCase()) > -1) {
           finded = true
         } else {
           finded = false
