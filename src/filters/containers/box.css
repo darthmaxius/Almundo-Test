@@ -1,3 +1,11 @@
-.Box.panel .panel-title a{
+.Box.panel .panel-title a {
   display: block;
+}
+
+.Box.panel .panel-title i{
+  margin-right: 10px;
+}
+
+.Box.panel .panel-title, .Box.panel .panel-title i{
+  color: #157ab1;
 }
