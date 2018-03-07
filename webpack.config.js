@@ -1,6 +1,7 @@
 const path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = (env) => {
   const plugins = [
@@ -9,7 +10,11 @@ module.exports = (env) => {
 
   if (env.NODE_ENV === 'production') {
     plugins.push(
-      new CleanWebpackPlugin(['dist'], { root: __dirname })
+      new CleanWebpackPlugin(['dist'], { root: __dirname }),
+      new HtmlWebpackPlugin({
+        filename: './index.html',
+        template: './pages/index.html'
+      })
     )
   }
 
@@ -20,7 +25,7 @@ module.exports = (env) => {
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: 'js/[name].[hash].js',
-      publicPath: path.resolve(__dirname, 'dist') + '/',
+      publicPath: './',
       chunkFilename: 'js/[id].[chunkhash].js'
     },
     devServer: {
@@ -66,5 +71,6 @@ module.exports = (env) => {
         }
       ]
     },
-  plugins}
+    plugins
+  }
 }

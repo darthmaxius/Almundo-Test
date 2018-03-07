@@ -9,3 +9,17 @@
 .Box.panel .panel-title, .Box.panel .panel-title i{
   color: #157ab1;
 }
+
+.Box.panel{
+  border: none;
+  box-shadow: none;
+}
+
+.Box.panel .panel-title h3{
+  margin-top: 10px;
+}
+
+.Box.panel-default>.panel-heading{
+  background: transparent;
+  border: none;
+}
