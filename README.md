@@ -1,2 +1,2 @@
 - docker build -t alm-ui .
-- docker run -p 3000:3000 alm-ui npm start
+- docker run -p 8000:8000 alm-ui npm start
