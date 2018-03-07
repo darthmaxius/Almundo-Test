@@ -1,16 +1,16 @@
-.Logo{
+.Menu{
   background: linear-gradient(#002f71, #194884);
   height: 60px;
   border-radius: 0;
   border: none;
 }
 
-.Logo a.Logo-isologo{
+.Menu a.Logo-isologo{
   padding-top: 5px;
   padding-bottom: 5px;
   margin-left: 0 !important;
 }
 
-.Logo.navbar{
+.Menu.navbar{
   margin-bottom: 0;
 }

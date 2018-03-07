@@ -10,9 +10,16 @@
   color: #157ab1;
 }
 
+.Box.panel .panel-body{
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .Box.panel{
   border: none;
-  box-shadow: none;
+  background-color: white;
+  box-shadow: 0 2px 2px rgba(0,0,0,.05);
+  margin-bottom: 10px;
 }
 
 .Box.panel .panel-title h3{
