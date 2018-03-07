@@ -9,6 +9,11 @@
   padding: 5px;
 }
 
+.Hotel .Hotel-img.img-responsive{
+  min-width: 100%;
+  max-height: 250px;
+}
+
 .Hotel-data .StarsBlock{
   margin-bottom: 1em;
 }
@@ -25,4 +30,26 @@
 .Hotel-data h3{
   margin-bottom: 0px;
   color: #157ab1;
+}
+
+.Hotel-item .row.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Hotel-item .row.row-eq-height > div:last-child{
+  border-left: 1px dashed #ccc;
+}
+
+@media(max-width: 990px){
+  .Hotel-item .row.row-eq-height {
+    display: grid;
+  }
+
+  .Hotel-item .row.row-eq-height > div:last-child{
+    border-left: 0px;
+    border-top: 1px dashed #ccc;
+  }
 }

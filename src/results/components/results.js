@@ -8,10 +8,10 @@ const Results = (props) => {
     <div className='container-fluid'>
       <Grid bsClass=''>
         <Row className='show-grid'>
-          <Col md={3}>
+          <Col md={3} sm={12}>
             <Filters></Filters>
           </Col>
-          <Col md={9}>
+          <Col md={9} sm={12}>
             {props.loading ?
               <h2>Cargando</h2>
               :

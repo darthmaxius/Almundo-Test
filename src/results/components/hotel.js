@@ -11,7 +11,7 @@ const Hotel = (props) => {
   return (
     <div className='Hotel'>
       <Grid bsClass='Hotel-item'>
-        <Row>
+        <Row className="row-eq-height">
           <Col md={3} sm={12}>
             <img className='Hotel-img img-responsive' src={`${IMAGES_HOTELS}/${props.image}`} />
           </Col>
