@@ -2,6 +2,7 @@
   background: linear-gradient(#002f71, #194884);
   height: 60px;
   border-radius: 0;
+  border: none;
 }
 
 .Logo a.Logo-isologo{
