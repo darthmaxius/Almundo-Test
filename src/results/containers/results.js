@@ -5,13 +5,13 @@ import { bindActionCreators } from 'redux'
 import * as actions from '../../actions/index'
 
 class Results extends Component {
-  componentDidMount () {
+  componentDidMount() {
     this.props.actions.getResults()
   }
 
-  render () {
+  render() {
     return (
-      <ResultsComponent results={this.props.results} loading={this.props.loading} />
+      <ResultsComponent results={this.props.results} loading={this.props.loading} failed={this.props.failed} />
     )
   }
 }
@@ -19,7 +19,8 @@ class Results extends Component {
 const mapStateToProps = (state, props) => {
   return {
     results: state.get('hotels'),
-    loading: state.get('loading')
+    loading: state.get('loading'),
+    failed: state.get('failed')
   }
 }
 

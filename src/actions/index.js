@@ -1,7 +1,7 @@
-import { CLICK_STARS, RESULT_SUCCESS, RESULT_IS_LOADING, UPDATE_RESULT, UPDATE_FILTERS } from '../action-types'
+import { CLICK_STARS, RESULT_SUCCESS, RESULT_IS_LOADING, UPDATE_RESULT, UPDATE_FILTERS, RESULT_FAILED } from '../action-types'
 import { URL_API_HOTELS } from '../config'
 
-export function drawStars() {
+export const drawStars = () => {
   return {
     type: DRAW_STARS,
     payload: {
@@ -9,7 +9,7 @@ export function drawStars() {
   }
 }
 
-export function resultIsLoading(bool) {
+export const resultIsLoading = (bool) => {
   return {
     type: RESULT_IS_LOADING,
     isLoading: bool
@@ -25,7 +25,7 @@ const resultSuccess = (data) => {
   }
 }
 
-export function getResults() {
+export const getResults = () => {
   return (dispatch) => {
     dispatch(resultIsLoading(true))
 
@@ -43,11 +43,15 @@ export function getResults() {
       .then(data => {
         return dispatch(resultSuccess(data))
       })
-      .catch(e => console.error('Something went wrong'))
+      .catch(e => {
+        console.error('Something went wrong')
+
+        return dispatch(resultFailed())
+      })
   }
 }
 
-export function updateResults(data) {
+export const updateResults = (data) => {
   return {
     type: UPDATE_RESULT,
     payload: {
@@ -56,11 +60,19 @@ export function updateResults(data) {
   }
 }
 
-export function updateFilters(data) {
+export const updateFilters = (data) => {
   return {
     type: UPDATE_FILTERS,
     payload: {
       filters: data
+    }
+  }
+}
+
+export const resultFailed = (data) => {
+  return {
+    type: RESULT_FAILED,
+    payload: {
     }
   }
 }

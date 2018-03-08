@@ -1,13 +1,16 @@
-import { RESULT_SUCCESS, RESULT_IS_LOADING } from '../action-types'
+import { RESULT_SUCCESS, RESULT_IS_LOADING, RESULT_FAILED } from '../action-types'
 
 let initialState = true
 
-function loading (state = initialState , action) {
+const loading = (state = initialState, action) => {
   switch (action.type) {
     case RESULT_IS_LOADING:
       state = true
       return state
     case RESULT_SUCCESS:
+      state = false
+      return state
+    case RESULT_FAILED:
       state = false
       return state
     default:
