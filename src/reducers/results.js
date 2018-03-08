@@ -28,8 +28,6 @@ const results = (state = initialState, action) => {
         return finded
       })
 
-
-
       return filteredResults
       break
 
