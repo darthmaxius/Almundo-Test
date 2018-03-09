@@ -20,7 +20,7 @@ class BoxName extends Component {
       <Panel defaultExpanded className='Box'>
         <Panel.Heading>
           <Panel.Title toggle>
-            <i className="icon-search"></i>Nombre del Hotel
+            <i className="icon-search"></i>Nombre del Hotel  <i className='icon-dropdown pull-right'></i>
           </Panel.Title>
         </Panel.Heading>
         <Panel.Collapse>

@@ -8,12 +8,12 @@ import { Panel } from 'react-bootstrap'
 import './filters.css'
 
 class Filters extends Component {
-  render() {
+  render () {
     return (
       <Panel defaultExpanded className='Filters'>
         <Panel.Heading>
           <Panel.Title toggle>
-            <h3>Filtros</h3>
+            <h3>Filtros <i className='icon-dropdown pull-right'></i></h3>
           </Panel.Title>
         </Panel.Heading>
         <Panel.Collapse>

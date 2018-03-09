@@ -20,6 +20,14 @@
   margin-top: 10px;
 }
 
+.Filters.panel .panel-title i.icon-dropdown{
+  transform: rotate(180deg);
+}
+
+.Filters.panel .panel-title .collapsed i.icon-dropdown{
+  transform: rotate(0deg);
+}
+
 .Filters.panel-default>.panel-heading{
   background: transparent;
   border: none;

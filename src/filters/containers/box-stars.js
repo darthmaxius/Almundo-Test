@@ -46,7 +46,7 @@ class BoxStars extends Component {
       <Panel defaultExpanded className='Box'>
         <Panel.Heading>
           <Panel.Title toggle>
-            <StarIcon stars="1" />Estrellas
+            <StarIcon stars="1" />Estrellas  <i className='icon-dropdown pull-right'></i>
           </Panel.Title>
         </Panel.Heading>
         <Panel.Collapse>
